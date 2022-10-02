@@ -1,10 +1,22 @@
 #pragma once
-#include <ofstream>
+#include <fstream>
 #include <string>
-class Logger
+namespace GS3
 {
-	enum Priority{LOG,WARNING,CRITICAL,CRASH};
-	std::ofstream
-	Logger(std::string path, std::string name, bool overwrite=true);
-	bool Log(Priority, std::string& message);
-};
+	namespace Util
+	{
+		class Logger
+		{
+		public:
+			enum class Priority { INFO, WARNING, CRITICAL, CRASH };
+			static Logger* CreateLogger (std::string path, std::string name, bool overwrite = false);
+			void Log (Priority priority, std::string& message);
+			void Log (Priority priority, const char* message);
+			~Logger ();
+		private:
+			Logger (std::string fullPath);
+			std::ofstream m_FileStream;
+
+		};
+	}
+}
