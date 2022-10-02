@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="dir_f4e982bca5d979afcf7d664254407d09" kind="dir">
+    <compoundname>Main</compoundname>
+    <innerdir refid="dir_2e10f0de7c4a2973c119ed38b66781a8">Main/System</innerdir>
+    <innerfile refid="_main_8cpp">Main.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Main/"/>
+  </compounddef>
+</doxygen>

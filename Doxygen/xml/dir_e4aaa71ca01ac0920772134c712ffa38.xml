@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="dir_e4aaa71ca01ac0920772134c712ffa38" kind="dir">
+    <compoundname>out/build/windows-default</compoundname>
+    <innerdir refid="dir_e745d820abccf82b1828bd76d0e60c18">out/build/windows-default/CMakeFiles</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="out/build/windows-default/"/>
+  </compounddef>
+</doxygen>

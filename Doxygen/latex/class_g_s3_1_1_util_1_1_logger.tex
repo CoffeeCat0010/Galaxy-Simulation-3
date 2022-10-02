@@ -1,0 +1,169 @@
+\hypertarget{class_g_s3_1_1_util_1_1_logger}{}\doxysection{GS3\+::Util\+::Logger Class Reference}
+\label{class_g_s3_1_1_util_1_1_logger}\index{GS3::Util::Logger@{GS3::Util::Logger}}
+
+
+{\ttfamily \#include $<$Logger.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{class_g_s3_1_1_util_1_1_logger_ac2f457b1a64424da74fb2ee2b0e9ffeb}{Priority}} \{ \mbox{\hyperlink{class_g_s3_1_1_util_1_1_logger_ac2f457b1a64424da74fb2ee2b0e9ffeba551b723eafd6a31d444fcb2f5920fbd3}{INFO}}
+, \mbox{\hyperlink{class_g_s3_1_1_util_1_1_logger_ac2f457b1a64424da74fb2ee2b0e9ffeba059e9861e0400dfbe05c98a841f3f96b}{WARNING}}
+, \mbox{\hyperlink{class_g_s3_1_1_util_1_1_logger_ac2f457b1a64424da74fb2ee2b0e9ffeba99cd1c61610c76a57cb8d10d6df6b870}{CRITICAL}}
+, \mbox{\hyperlink{class_g_s3_1_1_util_1_1_logger_ac2f457b1a64424da74fb2ee2b0e9ffebacef2f26f7da88da7db20faa12bd436c4}{CRASH}}
+ \}
+\begin{DoxyCompactList}\small\item\em Priority Enumeration for setting the priority of the log message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_g_s3_1_1_util_1_1_logger_a6681a6c060143005205f1e2c96d4a6c8}{log}} (\mbox{\hyperlink{class_g_s3_1_1_util_1_1_logger_ac2f457b1a64424da74fb2ee2b0e9ffeb}{Priority}} priority, std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Logs a given message to the log output file. Prepeneded will be the priority and the time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_s3_1_1_util_1_1_logger_a817b21718c23e07bed21fb091e9681d9}{log}} (\mbox{\hyperlink{class_g_s3_1_1_util_1_1_logger_ac2f457b1a64424da74fb2ee2b0e9ffeb}{Priority}} priority, const char $\ast$message)
+\begin{DoxyCompactList}\small\item\em Logs a given message to the log output file. Prepeneded will be the priority and the time. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_g_s3_1_1_util_1_1_logger_ac8dd281814470887a2d0753a08506312}{logger\+Good}} ()
+\begin{DoxyCompactList}\small\item\em Determines if the logger stream is still good. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_g_s3_1_1_util_1_1_logger_a54a12871b6596d9d80598c5bcd5185d9}{$\sim$\+Logger}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_g_s3_1_1_util_1_1_logger}{Logger}} $\ast$ \mbox{\hyperlink{class_g_s3_1_1_util_1_1_logger_af8c75435b6c5d091c43ba9fc2343a5de}{create\+Logger}} (std\+::string path, std\+::string name, bool overwrite=false)
+\begin{DoxyCompactList}\small\item\em A Util\+::logger factory. It checks to make sure that if the file already exists if you do not want to overwrite it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_g_s3_1_1_util_1_1_logger_ac2f457b1a64424da74fb2ee2b0e9ffeb}\label{class_g_s3_1_1_util_1_1_logger_ac2f457b1a64424da74fb2ee2b0e9ffeb}} 
+\index{GS3::Util::Logger@{GS3::Util::Logger}!Priority@{Priority}}
+\index{Priority@{Priority}!GS3::Util::Logger@{GS3::Util::Logger}}
+\doxysubsubsection{\texorpdfstring{Priority}{Priority}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{class_g_s3_1_1_util_1_1_logger_ac2f457b1a64424da74fb2ee2b0e9ffeb}{GS3\+::\+Util\+::\+Logger\+::\+Priority}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Priority Enumeration for setting the priority of the log message. 
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\raggedleft \cellcolor{\tableheadbgcolor}\textbf{ Level   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\raggedleft \cellcolor{\tableheadbgcolor}\textbf{ Level   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+\PBS\raggedleft INFO   &This should indicate a normal log message for the program (e.\+g logging initializations, file saves, progress starting or ending, etc)    \\\cline{1-2}
+\PBS\raggedleft Warning   &This should indicate a potentially error causing state that can be recovered from (e.\+g. file not found). These should also indicate that the programmer has created a system to recover from these states. In other words, if the program as is cannot recover, then it should be categorized in the more critical states    \\\cline{1-2}
+\PBS\raggedleft Critical   &These should indicate error causing states. Any state that does not allow the program to function as intended should be categorized here. They should not indicate a crash or it\`{}s direct cause, however they can indicate the steps leading up to a crash.    \\\cline{1-2}
+\PBS\raggedleft Crash   &This should indicate that a crash has happened or will happen and log the relevant info here. Things that might be appropriate are, line numbers or file where this crash occurred.   \\\cline{1-2}
+\end{longtabu}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INFO@{INFO}!GS3::Util::Logger@{GS3::Util::Logger}}\index{GS3::Util::Logger@{GS3::Util::Logger}!INFO@{INFO}}}\mbox{\Hypertarget{class_g_s3_1_1_util_1_1_logger_ac2f457b1a64424da74fb2ee2b0e9ffeba551b723eafd6a31d444fcb2f5920fbd3}\label{class_g_s3_1_1_util_1_1_logger_ac2f457b1a64424da74fb2ee2b0e9ffeba551b723eafd6a31d444fcb2f5920fbd3}} 
+INFO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WARNING@{WARNING}!GS3::Util::Logger@{GS3::Util::Logger}}\index{GS3::Util::Logger@{GS3::Util::Logger}!WARNING@{WARNING}}}\mbox{\Hypertarget{class_g_s3_1_1_util_1_1_logger_ac2f457b1a64424da74fb2ee2b0e9ffeba059e9861e0400dfbe05c98a841f3f96b}\label{class_g_s3_1_1_util_1_1_logger_ac2f457b1a64424da74fb2ee2b0e9ffeba059e9861e0400dfbe05c98a841f3f96b}} 
+WARNING&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CRITICAL@{CRITICAL}!GS3::Util::Logger@{GS3::Util::Logger}}\index{GS3::Util::Logger@{GS3::Util::Logger}!CRITICAL@{CRITICAL}}}\mbox{\Hypertarget{class_g_s3_1_1_util_1_1_logger_ac2f457b1a64424da74fb2ee2b0e9ffeba99cd1c61610c76a57cb8d10d6df6b870}\label{class_g_s3_1_1_util_1_1_logger_ac2f457b1a64424da74fb2ee2b0e9ffeba99cd1c61610c76a57cb8d10d6df6b870}} 
+CRITICAL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CRASH@{CRASH}!GS3::Util::Logger@{GS3::Util::Logger}}\index{GS3::Util::Logger@{GS3::Util::Logger}!CRASH@{CRASH}}}\mbox{\Hypertarget{class_g_s3_1_1_util_1_1_logger_ac2f457b1a64424da74fb2ee2b0e9ffebacef2f26f7da88da7db20faa12bd436c4}\label{class_g_s3_1_1_util_1_1_logger_ac2f457b1a64424da74fb2ee2b0e9ffebacef2f26f7da88da7db20faa12bd436c4}} 
+CRASH&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_s3_1_1_util_1_1_logger_a54a12871b6596d9d80598c5bcd5185d9}\label{class_g_s3_1_1_util_1_1_logger_a54a12871b6596d9d80598c5bcd5185d9}} 
+\index{GS3::Util::Logger@{GS3::Util::Logger}!````~Logger@{$\sim$Logger}}
+\index{````~Logger@{$\sim$Logger}!GS3::Util::Logger@{GS3::Util::Logger}}
+\doxysubsubsection{\texorpdfstring{$\sim$Logger()}{~Logger()}}
+{\footnotesize\ttfamily GS3\+::\+Util\+::\+Logger\+::$\sim$\+Logger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_s3_1_1_util_1_1_logger_af8c75435b6c5d091c43ba9fc2343a5de}\label{class_g_s3_1_1_util_1_1_logger_af8c75435b6c5d091c43ba9fc2343a5de}} 
+\index{GS3::Util::Logger@{GS3::Util::Logger}!createLogger@{createLogger}}
+\index{createLogger@{createLogger}!GS3::Util::Logger@{GS3::Util::Logger}}
+\doxysubsubsection{\texorpdfstring{createLogger()}{createLogger()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_g_s3_1_1_util_1_1_logger}{Logger}} $\ast$ GS3\+::\+Util\+::\+Logger\+::create\+Logger (\begin{DoxyParamCaption}\item[{std\+::string}]{path,  }\item[{std\+::string}]{name,  }\item[{bool}]{overwrite = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A Util\+::logger factory. It checks to make sure that if the file already exists if you do not want to overwrite it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The folder path to the file you want to create \\
+\hline
+{\em name} & The name of the log file you want to create \\
+\hline
+{\em overwrite} & The overwrite value. It asks if the file is already there, do you want to overwrite it. False by default \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a pointer to a logger instance if good, nullptr otherwise. Note\+: If the file already exists and the overwrite flag is false, then return nullptr. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_s3_1_1_util_1_1_logger_a817b21718c23e07bed21fb091e9681d9}\label{class_g_s3_1_1_util_1_1_logger_a817b21718c23e07bed21fb091e9681d9}} 
+\index{GS3::Util::Logger@{GS3::Util::Logger}!log@{log}}
+\index{log@{log}!GS3::Util::Logger@{GS3::Util::Logger}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void GS3\+::\+Util\+::\+Logger\+::log (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_g_s3_1_1_util_1_1_logger_ac2f457b1a64424da74fb2ee2b0e9ffeb}{Priority}}}]{priority,  }\item[{const char $\ast$}]{message }\end{DoxyParamCaption})}
+
+
+
+Logs a given message to the log output file. Prepeneded will be the priority and the time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em priority} & The Priority level of the message. For more info see \mbox{\hyperlink{class_g_s3_1_1_util_1_1_logger_ac2f457b1a64424da74fb2ee2b0e9ffeb}{Logger\+::\+Priority}} \\
+\hline
+{\em message} & The message you wish to put into the log file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_s3_1_1_util_1_1_logger_a6681a6c060143005205f1e2c96d4a6c8}\label{class_g_s3_1_1_util_1_1_logger_a6681a6c060143005205f1e2c96d4a6c8}} 
+\index{GS3::Util::Logger@{GS3::Util::Logger}!log@{log}}
+\index{log@{log}!GS3::Util::Logger@{GS3::Util::Logger}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void GS3\+::\+Util\+::\+Logger\+::log (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_g_s3_1_1_util_1_1_logger_ac2f457b1a64424da74fb2ee2b0e9ffeb}{Priority}}}]{priority,  }\item[{std\+::string \&}]{message }\end{DoxyParamCaption})}
+
+
+
+Logs a given message to the log output file. Prepeneded will be the priority and the time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em priority} & The Priority level of the message. For more info see \mbox{\hyperlink{class_g_s3_1_1_util_1_1_logger_ac2f457b1a64424da74fb2ee2b0e9ffeb}{Logger\+::\+Priority}} \\
+\hline
+{\em message} & The message you wish to put into the log file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_s3_1_1_util_1_1_logger_ac8dd281814470887a2d0753a08506312}\label{class_g_s3_1_1_util_1_1_logger_ac8dd281814470887a2d0753a08506312}} 
+\index{GS3::Util::Logger@{GS3::Util::Logger}!loggerGood@{loggerGood}}
+\index{loggerGood@{loggerGood}!GS3::Util::Logger@{GS3::Util::Logger}}
+\doxysubsubsection{\texorpdfstring{loggerGood()}{loggerGood()}}
+{\footnotesize\ttfamily bool GS3\+::\+Util\+::\+Logger\+::logger\+Good (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Determines if the logger stream is still good. 
+
+\begin{DoxyReturn}{Returns}
+returns True if the logger file stream is still active, false otherwise ~\newline
+ 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Main/\+System/\mbox{\hyperlink{_logger_8h}{Logger.\+h}}\item 
+Main/\+System/\mbox{\hyperlink{_logger_8cpp}{Logger.\+cpp}}\end{DoxyCompactItemize}

@@ -2,8 +2,8 @@
 using namespace GS3;
 	int main ()
 	{
-		Util::Logger* logger = Util::Logger::CreateLogger ("", "Log.txt", true);
-		logger->Log(Util::Logger::Priority::INFO, "Hello World");
+		Util::Logger* logger = Util::Logger::createLogger ("", "Log.txt", true);
+		logger->log(Util::Logger::Priority::INFO, "Hello World");
 		delete logger;
 		return 1;
 	}

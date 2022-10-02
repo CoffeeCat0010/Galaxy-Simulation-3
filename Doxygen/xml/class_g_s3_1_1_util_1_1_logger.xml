@@ -1,0 +1,406 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_g_s3_1_1_util_1_1_logger" kind="class" language="C++" prot="public">
+    <compoundname>GS3::Util::Logger</compoundname>
+    <includes refid="_logger_8h" local="no">Logger.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_g_s3_1_1_util_1_1_logger_1ac2f457b1a64424da74fb2ee2b0e9ffeb" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Priority</name>
+        <qualifiedname>GS3::Util::Logger::Priority</qualifiedname>
+        <enumvalue id="class_g_s3_1_1_util_1_1_logger_1ac2f457b1a64424da74fb2ee2b0e9ffeba551b723eafd6a31d444fcb2f5920fbd3" prot="public">
+          <name>INFO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_g_s3_1_1_util_1_1_logger_1ac2f457b1a64424da74fb2ee2b0e9ffeba059e9861e0400dfbe05c98a841f3f96b" prot="public">
+          <name>WARNING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_g_s3_1_1_util_1_1_logger_1ac2f457b1a64424da74fb2ee2b0e9ffeba99cd1c61610c76a57cb8d10d6df6b870" prot="public">
+          <name>CRITICAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_g_s3_1_1_util_1_1_logger_1ac2f457b1a64424da74fb2ee2b0e9ffebacef2f26f7da88da7db20faa12bd436c4" prot="public">
+          <name>CRASH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Priority Enumeration for setting the priority of the log message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><table rows="5" cols="2"><row>
+<entry thead="yes" align='right'><para>Level   </para>
+</entry><entry thead="yes" align='left'><para>Description    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>INFO   </para>
+</entry><entry thead="no" align='left'><para>This should indicate a normal log message for the program (e.g logging initializations, file saves, progress starting or ending, etc)    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>Warning   </para>
+</entry><entry thead="no" align='left'><para>This should indicate a potentially error causing state that can be recovered from (e.g. file not found). These should also indicate that the programmer has created a system to recover from these states. In other words, if the program as is cannot recover, then it should be categorized in the more critical states    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>Critical   </para>
+</entry><entry thead="no" align='left'><para>These should indicate error causing states. Any state that does not allow the program to function as intended should be categorized here. They should not indicate a crash or it`s direct cause, however they can indicate the steps leading up to a crash.    </para>
+</entry></row>
+<row>
+<entry thead="no" align='right'><para>Crash   </para>
+</entry><entry thead="no" align='left'><para>This should indicate that a crash has happened or will happen and log the relevant info here. Things that might be appropriate are, line numbers or file where this crash occurred.   </para>
+</entry></row>
+</table>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Main/System/Logger.h" line="18" column="1" bodyfile="Main/System/Logger.h" bodystart="18" bodyend="18"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_g_s3_1_1_util_1_1_logger_1aaf7dd14ec54f32b8051948d153ce9455" prot="private" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string GS3::Util::Logger::PriorityString_INFO</definition>
+        <argsstring></argsstring>
+        <name>PriorityString_INFO</name>
+        <qualifiedname>GS3::Util::Logger::PriorityString_INFO</qualifiedname>
+        <initializer>= &quot;[INFO] &quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Main/System/Logger.h" line="27" column="19" bodyfile="Main/System/Logger.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_g_s3_1_1_util_1_1_logger_1aafbe594bfa8af65d15916d65d764ff04" prot="private" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string GS3::Util::Logger::PriorityString_WARNING</definition>
+        <argsstring></argsstring>
+        <name>PriorityString_WARNING</name>
+        <qualifiedname>GS3::Util::Logger::PriorityString_WARNING</qualifiedname>
+        <initializer>= &quot;[WARNING] &quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Main/System/Logger.h" line="28" column="19" bodyfile="Main/System/Logger.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_g_s3_1_1_util_1_1_logger_1af45df9cf34ad2aac06c47a0fb3d10bd7" prot="private" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string GS3::Util::Logger::PriorityString_CRITICAL</definition>
+        <argsstring></argsstring>
+        <name>PriorityString_CRITICAL</name>
+        <qualifiedname>GS3::Util::Logger::PriorityString_CRITICAL</qualifiedname>
+        <initializer>= &quot;[CRITICAL] &quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Main/System/Logger.h" line="29" column="19" bodyfile="Main/System/Logger.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_g_s3_1_1_util_1_1_logger_1a1dd86519ea60aa670e5c774364618c4d" prot="private" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string GS3::Util::Logger::PriorityString_CRASH</definition>
+        <argsstring></argsstring>
+        <name>PriorityString_CRASH</name>
+        <qualifiedname>GS3::Util::Logger::PriorityString_CRASH</qualifiedname>
+        <initializer>= &quot;[CRASH] &quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Main/System/Logger.h" line="30" column="19" bodyfile="Main/System/Logger.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_g_s3_1_1_util_1_1_logger_1a7671647681a22d59a44ee5ecdae4e365" prot="private" static="no" mutable="no">
+        <type>std::ofstream</type>
+        <definition>std::ofstream GS3::Util::Logger::m_FileStream</definition>
+        <argsstring></argsstring>
+        <name>m_FileStream</name>
+        <qualifiedname>GS3::Util::Logger::m_FileStream</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Main/System/Logger.h" line="33" column="15" bodyfile="Main/System/Logger.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_g_s3_1_1_util_1_1_logger_1af8c75435b6c5d091c43ba9fc2343a5de" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_g_s3_1_1_util_1_1_logger" kindref="compound">Logger</ref> *</type>
+        <definition>Logger * GS3::Util::Logger::createLogger</definition>
+        <argsstring>(std::string path, std::string name, bool overwrite=false)</argsstring>
+        <name>createLogger</name>
+        <qualifiedname>GS3::Util::Logger::createLogger</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>overwrite</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>A Util::logger factory. It checks to make sure that if the file already exists if you do not want to overwrite it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The folder path to the file you want to create </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the log file you want to create </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>overwrite</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The overwrite value. It asks if the file is already there, do you want to overwrite it. False by default </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a pointer to a logger instance if good, nullptr otherwise. Note: If the file already exists and the overwrite flag is false, then return nullptr. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Main/System/Logger.h" line="19" column="15" bodyfile="Main/System/Logger.cpp" bodystart="13" bodyend="29"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_g_s3_1_1_util_1_1_logger_1a6681a6c060143005205f1e2c96d4a6c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GS3::Util::Logger::log</definition>
+        <argsstring>(Priority priority, std::string &amp;message)</argsstring>
+        <name>log</name>
+        <qualifiedname>GS3::Util::Logger::log</qualifiedname>
+        <param>
+          <type><ref refid="class_g_s3_1_1_util_1_1_logger_1ac2f457b1a64424da74fb2ee2b0e9ffeb" kindref="member">Priority</ref></type>
+          <declname>priority</declname>
+        </param>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Logs a given message to the log output file. Prepeneded will be the priority and the time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>priority</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Priority level of the message. For more info see <ref refid="class_g_s3_1_1_util_1_1_logger_1ac2f457b1a64424da74fb2ee2b0e9ffeb" kindref="member">Logger::Priority</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message you wish to put into the log file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Main/System/Logger.h" line="20" column="6" bodyfile="Main/System/Logger.cpp" bodystart="40" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_g_s3_1_1_util_1_1_logger_1a817b21718c23e07bed21fb091e9681d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GS3::Util::Logger::log</definition>
+        <argsstring>(Priority priority, const char *message)</argsstring>
+        <name>log</name>
+        <qualifiedname>GS3::Util::Logger::log</qualifiedname>
+        <param>
+          <type><ref refid="class_g_s3_1_1_util_1_1_logger_1ac2f457b1a64424da74fb2ee2b0e9ffeb" kindref="member">Priority</ref></type>
+          <declname>priority</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Logs a given message to the log output file. Prepeneded will be the priority and the time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>priority</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Priority level of the message. For more info see <ref refid="class_g_s3_1_1_util_1_1_logger_1ac2f457b1a64424da74fb2ee2b0e9ffeb" kindref="member">Logger::Priority</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message you wish to put into the log file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Main/System/Logger.h" line="21" column="6" bodyfile="Main/System/Logger.cpp" bodystart="33" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_g_s3_1_1_util_1_1_logger_1ac8dd281814470887a2d0753a08506312" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GS3::Util::Logger::loggerGood</definition>
+        <argsstring>()</argsstring>
+        <name>loggerGood</name>
+        <qualifiedname>GS3::Util::Logger::loggerGood</qualifiedname>
+        <briefdescription>
+<para>Determines if the logger stream is still good. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns True if the logger file stream is still active, false otherwise <linebreak/>
+ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Main/System/Logger.h" line="24" column="13" bodyfile="Main/System/Logger.h" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_g_s3_1_1_util_1_1_logger_1a54a12871b6596d9d80598c5bcd5185d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GS3::Util::Logger::~Logger</definition>
+        <argsstring>()</argsstring>
+        <name>~Logger</name>
+        <qualifiedname>GS3::Util::Logger::~Logger</qualifiedname>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Main/System/Logger.h" line="25" column="1" bodyfile="Main/System/Logger.cpp" bodystart="54" bodyend="57"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_g_s3_1_1_util_1_1_logger_1a709687ecd0f828693c5d3342a4b6ff3e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string GS3::Util::Logger::getPriorityString</definition>
+        <argsstring>(Priority &amp;priority)</argsstring>
+        <name>getPriorityString</name>
+        <qualifiedname>GS3::Util::Logger::getPriorityString</qualifiedname>
+        <param>
+          <type><ref refid="class_g_s3_1_1_util_1_1_logger_1ac2f457b1a64424da74fb2ee2b0e9ffeb" kindref="member">Priority</ref> &amp;</type>
+          <declname>priority</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>priority</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The priority level being queried. See <ref refid="class_g_s3_1_1_util_1_1_logger_1ac2f457b1a64424da74fb2ee2b0e9ffeb" kindref="member">Logger::Priority</ref> for more info </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The string associated with the given priority level </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Main/System/Logger.h" line="31" column="13" bodyfile="Main/System/Logger.cpp" bodystart="61" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_g_s3_1_1_util_1_1_logger_1aa1ff015941ab9c57e1623b4333d0bd59" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GS3::Util::Logger::Logger</definition>
+        <argsstring>(std::string fullPath)</argsstring>
+        <name>Logger</name>
+        <qualifiedname>GS3::Util::Logger::Logger</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>fullPath</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fullPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Full path of the file including the file name <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Main/System/Logger.h" line="32" column="1" bodyfile="Main/System/Logger.cpp" bodystart="79" bodyend="81"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Main/System/Logger.h" line="8" column="1" bodyfile="Main/System/Logger.h" bodystart="9" bodyend="35"/>
+    <listofallmembers>
+      <member refid="class_g_s3_1_1_util_1_1_logger_1af8c75435b6c5d091c43ba9fc2343a5de" prot="public" virt="non-virtual"><scope>GS3::Util::Logger</scope><name>createLogger</name></member>
+      <member refid="class_g_s3_1_1_util_1_1_logger_1a709687ecd0f828693c5d3342a4b6ff3e" prot="private" virt="non-virtual"><scope>GS3::Util::Logger</scope><name>getPriorityString</name></member>
+      <member refid="class_g_s3_1_1_util_1_1_logger_1a6681a6c060143005205f1e2c96d4a6c8" prot="public" virt="non-virtual"><scope>GS3::Util::Logger</scope><name>log</name></member>
+      <member refid="class_g_s3_1_1_util_1_1_logger_1a817b21718c23e07bed21fb091e9681d9" prot="public" virt="non-virtual"><scope>GS3::Util::Logger</scope><name>log</name></member>
+      <member refid="class_g_s3_1_1_util_1_1_logger_1aa1ff015941ab9c57e1623b4333d0bd59" prot="private" virt="non-virtual"><scope>GS3::Util::Logger</scope><name>Logger</name></member>
+      <member refid="class_g_s3_1_1_util_1_1_logger_1ac8dd281814470887a2d0753a08506312" prot="public" virt="non-virtual"><scope>GS3::Util::Logger</scope><name>loggerGood</name></member>
+      <member refid="class_g_s3_1_1_util_1_1_logger_1a7671647681a22d59a44ee5ecdae4e365" prot="private" virt="non-virtual"><scope>GS3::Util::Logger</scope><name>m_FileStream</name></member>
+      <member refid="class_g_s3_1_1_util_1_1_logger_1ac2f457b1a64424da74fb2ee2b0e9ffeb" prot="public" virt="non-virtual"><scope>GS3::Util::Logger</scope><name>Priority</name></member>
+      <member refid="class_g_s3_1_1_util_1_1_logger_1a1dd86519ea60aa670e5c774364618c4d" prot="private" virt="non-virtual"><scope>GS3::Util::Logger</scope><name>PriorityString_CRASH</name></member>
+      <member refid="class_g_s3_1_1_util_1_1_logger_1af45df9cf34ad2aac06c47a0fb3d10bd7" prot="private" virt="non-virtual"><scope>GS3::Util::Logger</scope><name>PriorityString_CRITICAL</name></member>
+      <member refid="class_g_s3_1_1_util_1_1_logger_1aaf7dd14ec54f32b8051948d153ce9455" prot="private" virt="non-virtual"><scope>GS3::Util::Logger</scope><name>PriorityString_INFO</name></member>
+      <member refid="class_g_s3_1_1_util_1_1_logger_1aafbe594bfa8af65d15916d65d764ff04" prot="private" virt="non-virtual"><scope>GS3::Util::Logger</scope><name>PriorityString_WARNING</name></member>
+      <member refid="class_g_s3_1_1_util_1_1_logger_1a54a12871b6596d9d80598c5bcd5185d9" prot="public" virt="non-virtual"><scope>GS3::Util::Logger</scope><name>~Logger</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

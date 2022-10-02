@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Galaxy-Simulation-3</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>is<sp/>a<sp/>galaxy<sp/>simulation<sp/>tool<sp/>that<sp/>will<sp/>allow<sp/>you<sp/>to<sp/>create<sp/>and<sp/>run<sp/>large<sp/>realistic<sp/>simulations<sp/>of<sp/>galaxies<sp/>and<sp/>galaxy<sp/>collisions.</highlight></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

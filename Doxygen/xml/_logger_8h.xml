@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_logger_8h" kind="file" language="C++">
+    <compoundname>Logger.h</compoundname>
+    <includes local="no">fstream</includes>
+    <includes local="no">string</includes>
+    <includedby refid="_main_8cpp" local="yes">Main/Main.cpp</includedby>
+    <includedby refid="_logger_8cpp" local="yes">Main/System/Logger.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>Main/System/Logger.h</label>
+        <link refid="_logger_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>fstream</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>Main/Main.cpp</label>
+        <link refid="_main_8cpp"/>
+      </node>
+      <node id="3">
+        <label>Main/System/Logger.cpp</label>
+        <link refid="_logger_8cpp"/>
+      </node>
+      <node id="1">
+        <label>Main/System/Logger.h</label>
+        <link refid="_logger_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_g_s3_1_1_util_1_1_logger" prot="public">GS3::Util::Logger</innerclass>
+    <innernamespace refid="namespace_g_s3">GS3</innernamespace>
+    <innernamespace refid="namespace_g_s3_1_1_util">GS3::Util</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_g_s3" kindref="compound">GS3</ref></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Util</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="8" refid="class_g_s3_1_1_util_1_1_logger" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_g_s3_1_1_util_1_1_logger" kindref="compound">Logger</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18" refid="class_g_s3_1_1_util_1_1_logger_1ac2f457b1a64424da74fb2ee2b0e9ffeb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="class_g_s3_1_1_util_1_1_logger_1ac2f457b1a64424da74fb2ee2b0e9ffeb" kindref="member">Priority</ref><sp/>{<sp/><ref refid="class_g_s3_1_1_util_1_1_logger_1ac2f457b1a64424da74fb2ee2b0e9ffeba551b723eafd6a31d444fcb2f5920fbd3" kindref="member">INFO</ref>,<sp/><ref refid="class_g_s3_1_1_util_1_1_logger_1ac2f457b1a64424da74fb2ee2b0e9ffeba059e9861e0400dfbe05c98a841f3f96b" kindref="member">WARNING</ref>,<sp/><ref refid="class_g_s3_1_1_util_1_1_logger_1ac2f457b1a64424da74fb2ee2b0e9ffeba99cd1c61610c76a57cb8d10d6df6b870" kindref="member">CRITICAL</ref>,<sp/><ref refid="class_g_s3_1_1_util_1_1_logger_1ac2f457b1a64424da74fb2ee2b0e9ffebacef2f26f7da88da7db20faa12bd436c4" kindref="member">CRASH</ref><sp/>};</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_g_s3_1_1_util_1_1_logger" kindref="compound">Logger</ref>*<sp/><ref refid="class_g_s3_1_1_util_1_1_logger_1af8c75435b6c5d091c43ba9fc2343a5de" kindref="member">createLogger</ref><sp/>(std::string<sp/>path,<sp/>std::string<sp/>name,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>overwrite<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_g_s3_1_1_util_1_1_logger_1a6681a6c060143005205f1e2c96d4a6c8" kindref="member">log</ref><sp/>(<ref refid="class_g_s3_1_1_util_1_1_logger_1ac2f457b1a64424da74fb2ee2b0e9ffeb" kindref="member">Priority</ref><sp/>priority,<sp/>std::string&amp;<sp/>message);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_g_s3_1_1_util_1_1_logger_1a6681a6c060143005205f1e2c96d4a6c8" kindref="member">log</ref><sp/>(<ref refid="class_g_s3_1_1_util_1_1_logger_1ac2f457b1a64424da74fb2ee2b0e9ffeb" kindref="member">Priority</ref><sp/>priority,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>message);</highlight></codeline>
+<codeline lineno="24" refid="class_g_s3_1_1_util_1_1_logger_1ac8dd281814470887a2d0753a08506312" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_g_s3_1_1_util_1_1_logger_1ac8dd281814470887a2d0753a08506312" kindref="member">loggerGood</ref>()<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_FileStream.good();}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_g_s3_1_1_util_1_1_logger_1a54a12871b6596d9d80598c5bcd5185d9" kindref="member">~Logger</ref><sp/>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>PriorityString_INFO<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;[INFO]<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>PriorityString_WARNING<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;[WARNING]<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>PriorityString_CRITICAL<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;[CRITICAL]<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>PriorityString_CRASH<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;[CRASH]<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>getPriorityString(<ref refid="class_g_s3_1_1_util_1_1_logger_1ac2f457b1a64424da74fb2ee2b0e9ffeb" kindref="member">Priority</ref>&amp;<sp/>priority);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_g_s3_1_1_util_1_1_logger" kindref="compound">Logger</ref><sp/>(std::string<sp/>fullPath);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::ofstream<sp/>m_FileStream;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="Main/System/Logger.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,34 @@
+\hypertarget{_logger_8h_source}{}\doxysection{Logger.\+h}
+\label{_logger_8h_source}\index{Main/System/Logger.h@{Main/System/Logger.h}}
+\mbox{\hyperlink{_logger_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{4 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_g_s3}{GS3}}}
+\DoxyCodeLine{5 \{}
+\DoxyCodeLine{6     \textcolor{keyword}{namespace }Util}
+\DoxyCodeLine{7     \{}
+\DoxyCodeLine{8         \textcolor{keyword}{class }\mbox{\hyperlink{class_g_s3_1_1_util_1_1_logger}{Logger}}}
+\DoxyCodeLine{9         \{}
+\DoxyCodeLine{10         \textcolor{keyword}{public}:}
+\DoxyCodeLine{18             \textcolor{keyword}{enum class} \mbox{\hyperlink{class_g_s3_1_1_util_1_1_logger_ac2f457b1a64424da74fb2ee2b0e9ffeb}{Priority}} \{ \mbox{\hyperlink{class_g_s3_1_1_util_1_1_logger_ac2f457b1a64424da74fb2ee2b0e9ffeba551b723eafd6a31d444fcb2f5920fbd3}{INFO}}, \mbox{\hyperlink{class_g_s3_1_1_util_1_1_logger_ac2f457b1a64424da74fb2ee2b0e9ffeba059e9861e0400dfbe05c98a841f3f96b}{WARNING}}, \mbox{\hyperlink{class_g_s3_1_1_util_1_1_logger_ac2f457b1a64424da74fb2ee2b0e9ffeba99cd1c61610c76a57cb8d10d6df6b870}{CRITICAL}}, \mbox{\hyperlink{class_g_s3_1_1_util_1_1_logger_ac2f457b1a64424da74fb2ee2b0e9ffebacef2f26f7da88da7db20faa12bd436c4}{CRASH}} \};}
+\DoxyCodeLine{19             \textcolor{keyword}{static} \mbox{\hyperlink{class_g_s3_1_1_util_1_1_logger}{Logger}}* \mbox{\hyperlink{class_g_s3_1_1_util_1_1_logger_af8c75435b6c5d091c43ba9fc2343a5de}{createLogger}} (std::string path, std::string name, \textcolor{keywordtype}{bool} overwrite = \textcolor{keyword}{false});}
+\DoxyCodeLine{20             \textcolor{keywordtype}{void} \mbox{\hyperlink{class_g_s3_1_1_util_1_1_logger_a6681a6c060143005205f1e2c96d4a6c8}{log}} (\mbox{\hyperlink{class_g_s3_1_1_util_1_1_logger_ac2f457b1a64424da74fb2ee2b0e9ffeb}{Priority}} priority, std::string\& message);}
+\DoxyCodeLine{21             \textcolor{keywordtype}{void} \mbox{\hyperlink{class_g_s3_1_1_util_1_1_logger_a6681a6c060143005205f1e2c96d4a6c8}{log}} (\mbox{\hyperlink{class_g_s3_1_1_util_1_1_logger_ac2f457b1a64424da74fb2ee2b0e9ffeb}{Priority}} priority, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* message);}
+\DoxyCodeLine{24             \textcolor{keyword}{inline} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_g_s3_1_1_util_1_1_logger_ac8dd281814470887a2d0753a08506312}{loggerGood}}() \{\textcolor{keywordflow}{return} m\_FileStream.good();\}}
+\DoxyCodeLine{25             \mbox{\hyperlink{class_g_s3_1_1_util_1_1_logger_a54a12871b6596d9d80598c5bcd5185d9}{\string~Logger}} ();}
+\DoxyCodeLine{26         \textcolor{keyword}{private}:}
+\DoxyCodeLine{27             \textcolor{keyword}{const} std::string PriorityString\_INFO = \textcolor{stringliteral}{"{}[INFO] "{}};}
+\DoxyCodeLine{28             \textcolor{keyword}{const} std::string PriorityString\_WARNING = \textcolor{stringliteral}{"{}[WARNING] "{}};}
+\DoxyCodeLine{29             \textcolor{keyword}{const} std::string PriorityString\_CRITICAL = \textcolor{stringliteral}{"{}[CRITICAL] "{}};}
+\DoxyCodeLine{30             \textcolor{keyword}{const} std::string PriorityString\_CRASH = \textcolor{stringliteral}{"{}[CRASH] "{}};}
+\DoxyCodeLine{31             std::string getPriorityString(\mbox{\hyperlink{class_g_s3_1_1_util_1_1_logger_ac2f457b1a64424da74fb2ee2b0e9ffeb}{Priority}}\& priority);}
+\DoxyCodeLine{32             \mbox{\hyperlink{class_g_s3_1_1_util_1_1_logger}{Logger}} (std::string fullPath);}
+\DoxyCodeLine{33             std::ofstream m\_FileStream;}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35         \};}
+\DoxyCodeLine{36     \}}
+\DoxyCodeLine{37 \}}
+
+\end{DoxyCode}

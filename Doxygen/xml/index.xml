@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.5" xml:lang="en-US">
+  <compound refid="class_g_s3_1_1_util_1_1_logger" kind="class"><name>GS3::Util::Logger</name>
+    <member refid="class_g_s3_1_1_util_1_1_logger_1ac2f457b1a64424da74fb2ee2b0e9ffeb" kind="enum"><name>Priority</name></member>
+    <member refid="class_g_s3_1_1_util_1_1_logger_1ac2f457b1a64424da74fb2ee2b0e9ffeba551b723eafd6a31d444fcb2f5920fbd3" kind="enumvalue"><name>INFO</name></member>
+    <member refid="class_g_s3_1_1_util_1_1_logger_1ac2f457b1a64424da74fb2ee2b0e9ffeba059e9861e0400dfbe05c98a841f3f96b" kind="enumvalue"><name>WARNING</name></member>
+    <member refid="class_g_s3_1_1_util_1_1_logger_1ac2f457b1a64424da74fb2ee2b0e9ffeba99cd1c61610c76a57cb8d10d6df6b870" kind="enumvalue"><name>CRITICAL</name></member>
+    <member refid="class_g_s3_1_1_util_1_1_logger_1ac2f457b1a64424da74fb2ee2b0e9ffebacef2f26f7da88da7db20faa12bd436c4" kind="enumvalue"><name>CRASH</name></member>
+    <member refid="class_g_s3_1_1_util_1_1_logger_1aaf7dd14ec54f32b8051948d153ce9455" kind="variable"><name>PriorityString_INFO</name></member>
+    <member refid="class_g_s3_1_1_util_1_1_logger_1aafbe594bfa8af65d15916d65d764ff04" kind="variable"><name>PriorityString_WARNING</name></member>
+    <member refid="class_g_s3_1_1_util_1_1_logger_1af45df9cf34ad2aac06c47a0fb3d10bd7" kind="variable"><name>PriorityString_CRITICAL</name></member>
+    <member refid="class_g_s3_1_1_util_1_1_logger_1a1dd86519ea60aa670e5c774364618c4d" kind="variable"><name>PriorityString_CRASH</name></member>
+    <member refid="class_g_s3_1_1_util_1_1_logger_1a7671647681a22d59a44ee5ecdae4e365" kind="variable"><name>m_FileStream</name></member>
+    <member refid="class_g_s3_1_1_util_1_1_logger_1af8c75435b6c5d091c43ba9fc2343a5de" kind="function"><name>createLogger</name></member>
+    <member refid="class_g_s3_1_1_util_1_1_logger_1a6681a6c060143005205f1e2c96d4a6c8" kind="function"><name>log</name></member>
+    <member refid="class_g_s3_1_1_util_1_1_logger_1a817b21718c23e07bed21fb091e9681d9" kind="function"><name>log</name></member>
+    <member refid="class_g_s3_1_1_util_1_1_logger_1ac8dd281814470887a2d0753a08506312" kind="function"><name>loggerGood</name></member>
+    <member refid="class_g_s3_1_1_util_1_1_logger_1a54a12871b6596d9d80598c5bcd5185d9" kind="function"><name>~Logger</name></member>
+    <member refid="class_g_s3_1_1_util_1_1_logger_1a709687ecd0f828693c5d3342a4b6ff3e" kind="function"><name>getPriorityString</name></member>
+    <member refid="class_g_s3_1_1_util_1_1_logger_1aa1ff015941ab9c57e1623b4333d0bd59" kind="function"><name>Logger</name></member>
+  </compound>
+  <compound refid="namespace_g_s3" kind="namespace"><name>GS3</name>
+  </compound>
+  <compound refid="namespace_g_s3_1_1_util" kind="namespace"><name>GS3::Util</name>
+  </compound>
+  <compound refid="_main_8cpp" kind="file"><name>Main.cpp</name>
+    <member refid="_main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_logger_8cpp" kind="file"><name>Logger.cpp</name>
+  </compound>
+  <compound refid="_logger_8h" kind="file"><name>Logger.h</name>
+  </compound>
+  <compound refid="_c_make_c_compiler_id_8c" kind="file"><name>CMakeCCompilerId.c</name>
+    <member refid="_c_make_c_compiler_id_8c_1a81dee0709ded976b2e0319239f72d174" kind="define"><name>COMPILER_ID</name></member>
+    <member refid="_c_make_c_compiler_id_8c_1a2ae9b72bb13abaabfcf2ee0ba7d3fa1d" kind="define"><name>STRINGIFY_HELPER</name></member>
+    <member refid="_c_make_c_compiler_id_8c_1a43e1cad902b6477bec893cb6430bd6c8" kind="define"><name>STRINGIFY</name></member>
+    <member refid="_c_make_c_compiler_id_8c_1adbc5372f40838899018fadbc89bd588b" kind="define"><name>PLATFORM_ID</name></member>
+    <member refid="_c_make_c_compiler_id_8c_1aba35d0d200deaeb06aee95ca297acb28" kind="define"><name>ARCHITECTURE_ID</name></member>
+    <member refid="_c_make_c_compiler_id_8c_1ad1280362da42492bbc11aa78cbf776ad" kind="define"><name>DEC</name></member>
+    <member refid="_c_make_c_compiler_id_8c_1a46d5d95daa1bef867bd0179594310ed5" kind="define"><name>HEX</name></member>
+    <member refid="_c_make_c_compiler_id_8c_1a07f8e5783674099cd7f5110e22a78cdb" kind="define"><name>C_DIALECT</name></member>
+    <member refid="_c_make_c_compiler_id_8c_1a4b0efeb7a5d59313986b3a0390f050f6" kind="variable"><name>info_compiler</name></member>
+    <member refid="_c_make_c_compiler_id_8c_1a2321403dee54ee23f0c2fa849c60f7d4" kind="variable"><name>info_platform</name></member>
+    <member refid="_c_make_c_compiler_id_8c_1a59647e99d304ed33b15cb284c27ed391" kind="variable"><name>info_arch</name></member>
+    <member refid="_c_make_c_compiler_id_8c_1a1ce162bad2fe6966ac8b33cc19e120b8" kind="variable"><name>info_language_dialect_default</name></member>
+    <member refid="_c_make_c_compiler_id_8c_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_c_make_c_x_x_compiler_id_8cpp" kind="file"><name>CMakeCXXCompilerId.cpp</name>
+    <member refid="_c_make_c_x_x_compiler_id_8cpp_1a81dee0709ded976b2e0319239f72d174" kind="define"><name>COMPILER_ID</name></member>
+    <member refid="_c_make_c_x_x_compiler_id_8cpp_1a2ae9b72bb13abaabfcf2ee0ba7d3fa1d" kind="define"><name>STRINGIFY_HELPER</name></member>
+    <member refid="_c_make_c_x_x_compiler_id_8cpp_1a43e1cad902b6477bec893cb6430bd6c8" kind="define"><name>STRINGIFY</name></member>
+    <member refid="_c_make_c_x_x_compiler_id_8cpp_1adbc5372f40838899018fadbc89bd588b" kind="define"><name>PLATFORM_ID</name></member>
+    <member refid="_c_make_c_x_x_compiler_id_8cpp_1aba35d0d200deaeb06aee95ca297acb28" kind="define"><name>ARCHITECTURE_ID</name></member>
+    <member refid="_c_make_c_x_x_compiler_id_8cpp_1ad1280362da42492bbc11aa78cbf776ad" kind="define"><name>DEC</name></member>
+    <member refid="_c_make_c_x_x_compiler_id_8cpp_1a46d5d95daa1bef867bd0179594310ed5" kind="define"><name>HEX</name></member>
+    <member refid="_c_make_c_x_x_compiler_id_8cpp_1a34cc889e576a1ae6c84ae9e0a851ba21" kind="define"><name>CXX_STD</name></member>
+    <member refid="_c_make_c_x_x_compiler_id_8cpp_1a4b0efeb7a5d59313986b3a0390f050f6" kind="variable"><name>info_compiler</name></member>
+    <member refid="_c_make_c_x_x_compiler_id_8cpp_1a2321403dee54ee23f0c2fa849c60f7d4" kind="variable"><name>info_platform</name></member>
+    <member refid="_c_make_c_x_x_compiler_id_8cpp_1a59647e99d304ed33b15cb284c27ed391" kind="variable"><name>info_arch</name></member>
+    <member refid="_c_make_c_x_x_compiler_id_8cpp_1a1ce162bad2fe6966ac8b33cc19e120b8" kind="variable"><name>info_language_dialect_default</name></member>
+    <member refid="_c_make_c_x_x_compiler_id_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="foo_8h" kind="file"><name>foo.h</name>
+  </compound>
+  <compound refid="main_8c" kind="file"><name>main.c</name>
+    <member refid="main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="md__r_e_a_d_m_e" kind="page"><name>md_README</name>
+  </compound>
+  <compound refid="dir_3405f409ad740f9f782b49a013d8eab2" kind="dir"><name>out/build/windows-default/CMakeFiles/3.20.21032501-MSVC_2</name>
+  </compound>
+  <compound refid="dir_26e161bd706b689737ea0ef524ddc480" kind="dir"><name>out/build</name>
+  </compound>
+  <compound refid="dir_e745d820abccf82b1828bd76d0e60c18" kind="dir"><name>out/build/windows-default/CMakeFiles</name>
+  </compound>
+  <compound refid="dir_10ba275271f117e8fb9f96feafee3391" kind="dir"><name>out/build/windows-default/CMakeFiles/3.20.21032501-MSVC_2/CompilerIdC</name>
+  </compound>
+  <compound refid="dir_d8202d5618557b70367c324a1dfc4c59" kind="dir"><name>out/build/windows-default/CMakeFiles/3.20.21032501-MSVC_2/CompilerIdCXX</name>
+  </compound>
+  <compound refid="dir_f4e982bca5d979afcf7d664254407d09" kind="dir"><name>Main</name>
+  </compound>
+  <compound refid="dir_f09d564695a8a7f5713b0ef37bdf7d31" kind="dir"><name>out</name>
+  </compound>
+  <compound refid="dir_daf6771287b8c48117d91d37b851b558" kind="dir"><name>out/build/windows-default/CMakeFiles/ShowIncludes</name>
+  </compound>
+  <compound refid="dir_2e10f0de7c4a2973c119ed38b66781a8" kind="dir"><name>Main/System</name>
+  </compound>
+  <compound refid="dir_e4aaa71ca01ac0920772134c712ffa38" kind="dir"><name>out/build/windows-default</name>
+  </compound>
+</doxygenindex>

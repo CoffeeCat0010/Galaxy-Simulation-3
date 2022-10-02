@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="dir_daf6771287b8c48117d91d37b851b558" kind="dir">
+    <compoundname>out/build/windows-default/CMakeFiles/ShowIncludes</compoundname>
+    <innerfile refid="foo_8h">foo.h</innerfile>
+    <innerfile refid="main_8c">main.c</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="out/build/windows-default/CMakeFiles/ShowIncludes/"/>
+  </compounddef>
+</doxygen>
